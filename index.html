@@ -129,16 +129,12 @@ Segundo quiero expresar de como te veo ,a lo largo que nos conocemos no solo me 
     // Permitir reproducir audio tras la interacción del usuario
     window.addEventListener('load', () => {
       const audio = document.getElementById('bg-audio');
-    audio.muted = true;
-    audio.play().then(() => {
-      setTimeout(() => {
-        audio.muted = false;
-      }, 1000); // 1 segundo después de iniciar
-    }).catch(() => {
-      // Si el navegador bloquea, esperará el primer clic
-      document.addEventListener('click', () => {
-        audio.muted = false;
-        audio.play().catch(() => {});
+       const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          document.addEventListener('click', () => {
+            audio.muted = false;
+            audio.play().catch(() => {});
           }, { once: true });
         });
       }
@@ -146,5 +142,6 @@ Segundo quiero expresar de como te veo ,a lo largo que nos conocemos no solo me 
   </script>
 </body>
 </html>
+
 
 
