@@ -125,18 +125,20 @@ Primeramente quiero pedirte perdón de ese dia , no se exactamente que te dije p
 Segundo quiero expresar de como te veo ,a lo largo que nos conocemos no solo me enamoraste por tu apariencia , sino la persona que eres , en verdad eres una chica increíble , tan decidida , tan honesta , al defender a los tuyos no te tiembla la mano , eres una chica independiente , sabes como hacer las cosas sola , tu forma en la que te enfocas en lo que estas haciendo es único en verdad , y cuando estas tan enfocada haces unos pequeños movimientos que dan un poquito de risa , pero a la vez son tiernos en verdad , lo divertida que eres con los que te rodea , siempre tratando de sacarles una sonrisa , lo buen amiga que eres , y las grandes amigas que tienes , que entre ustedes se complementan y eso es muy bueno , la gran hija que eres , y sobre todo el gran ejemplo que eres para tus hermanos, no hay nada en ti que no me parezca perfecto , desde tu sonrisa que es tan preciosa , hasta tu risa que es tan única y que tanto me gusta, y como no mecionar ese ojos que tienes en la cual me perdi la primera vez que te vi , eres la mezcla tan bonita de todo lo que alguna vez soñe y cada parte de ti me hace creer que la perfeccion existe, en pocas palabras eres una chica maravillosa , perdón por ser un tonto denuevo se que no te merezco pero trate de mejorar , hice cosas que nunca había echo conigo , básicamente todo lo hice contigo por primera vez , bueno sueno un poco raro jaja , pero es verdad , pero creo que no basta con eso , la verdad trate de pedir consejo pero me decin puras babosadas que ni al caso , es por eso que frente a mis amigos me hago el malandro por haci decirlo , por que la mínima debilidad que vean de mi ya me hubieran estado friegue y friegue jaja pero bueno ammmm no se que pasara después de que leas esto , pero , espero de todo corazon que cumplas con todo lo que me contaste alguna vez , que seas muy exitosa , llena de abundancia , de viajes , de sueños cumplidos , y bueno aunque tu no ames a mi , y aunque quizás tu corazon le pertenece a alguien o le pertenecerá a alguien mas , eso no disminuirá ni un poco el amor que siento por ti , aunque quizás que mi sentimientos nunca serán correspondidos de la misma manera no me importa , yo elegi amarte desde el dia que me diste una y mil razones para hacerlo y no importa cuan lejos decidas ir o a quien elijas tener a tu lado , yo estaré feliz si tu eres feliz , mi amor por ti nunca será una cadena que te ate sino una voz que te recuerde todo lo que vales , no tienes que darme nada a cambio , todo lo que hice por ti es por que nacio de mi , todo lo hice de corazon y sin conseguir nada a cambio ni obligarte a nada , pero eso si solo prométeme que nunca te rendiras , que cuanto tengas problemas en tu vida siempre le buscaran solución , y se que lo haras por que eres una chica demasiado fuerte , se que mis intenciones fueron genuinas , por que si yo amo , no amo desde mi carencia , ni busco llenar mi vacio con amor , yo busco dar todo de mi y eso era contigo y como dije nunca entrego algo esperando algo a cambio . pero bueno se que te envie algo similar hace tiempo , y quizás me digas lo mismo que esa vez jeje , en fin si te espere pero no hice algo como para que te fijaras en mi creo , y bueno jaja mucho texto en fin , no se si hayas llegado hasta aca jaja y si si no se en que momento estes leendo esto pero espero que estes bien , y que hayan ganado en su partido jeje . en fin como te dije respetare tu decisión , no quiero obligarte a algo que no quieras y denuevo te pido perdón si hice algo malo. y buenoooo cuídate mucho danna , y como algunas vez te dije siempre seras mi KIND OF WOMAN.bye bye 
   </div>
 
-  <img class="final-image" src="29037c4c682f970083013d55933d8727" alt="Imagen final" />
-
   <script>
     // Permitir reproducir audio tras la interacción del usuario
     window.addEventListener('load', () => {
       const audio = document.getElementById('bg-audio');
-      const playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          document.addEventListener('click', () => {
-            audio.muted = false;
-            audio.play().catch(() => {});
+    audio.muted = true;
+    audio.play().then(() => {
+      setTimeout(() => {
+        audio.muted = false;
+      }, 1000); // 1 segundo después de iniciar
+    }).catch(() => {
+      // Si el navegador bloquea, esperará el primer clic
+      document.addEventListener('click', () => {
+        audio.muted = false;
+        audio.play().catch(() => {});
           }, { once: true });
         });
       }
@@ -144,4 +146,5 @@ Segundo quiero expresar de como te veo ,a lo largo que nos conocemos no solo me 
   </script>
 </body>
 </html>
+
 
